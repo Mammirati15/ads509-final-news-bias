@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classification Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Result</h1>
+    <p><strong>Input Text:</strong> {{ text }}</p>
+    <p><strong>Predicted Source:</strong> {{ prediction }}</p>
+    <p><strong>Confidence:</strong> {{ confidence }}</p>
+    <a href="/">Try Again</a>
+  </div>
+</body>
+</html>

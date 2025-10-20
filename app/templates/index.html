@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Bias Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📰 News Bias Classifier</h1>
+    <p>Enter a short news headline or paragraph to predict whether it’s from CNN or Fox News:</p>
+    <form action="/predict" method="post">
+      <textarea name="user_text" rows="6" placeholder="Type or paste your text here..." required></textarea><br>
+      <button type="submit">Classify</button>
+    </form>
+  </div>
+</body>
+</html>
+
