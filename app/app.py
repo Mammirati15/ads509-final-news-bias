@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import joblib
 from pathlib import Path
+import os  
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -27,8 +28,15 @@ def predict():
     probs = model.predict_proba(text_tfidf)[0]
     confidence = max(probs) * 100
 
-    return render_template("result.html", text=text, prediction=prediction, confidence=f"{confidence:.2f}%")
+    return render_template(
+        "result.html",
+        text=text,
+        prediction=prediction,
+        confidence=f"{confidence:.2f}%"
+    )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # 👈 Use Render's assigned port
+    app.run(host="0.0.0.0", port=port)
+
 
