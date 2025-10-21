@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic Model Overview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f7f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        h1, h2 {
+            color: #222;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+            margin: 0 8px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            color: #444;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f0f4ff;
+            border-left: 4px solid #007bff;
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        a.back {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #007bff;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        a.back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/topics">Topic Overview</a>
+        </nav>
+
+        <h1>Topic Model Overview</h1>
+        <p>
+            This project explores political news bias by analyzing article text from major outlets.  
+            A topic model (LDA) was used to uncover the most common clusters of themes in the dataset.
+            Each topic represents a group of words that tend to appear together across multiple articles.
+        </p>
+
+        <h2>Identified Topics</h2>
+        <ul>
+            <li><strong>Topic 1:</strong> Government, elections, policy, party, president</li>
+            <li><strong>Topic 2:</strong> Economy, inflation, jobs, taxes, business</li>
+            <li><strong>Topic 3:</strong> Climate, environment, science, renewable energy</li>
+            <li><strong>Topic 4:</strong> Crime, justice, law enforcement, safety</li>
+            <li><strong>Topic 5:</strong> Health, pandemic, medicine, public safety</li>
+        </ul>
+
+        <p>
+            These discovered topics highlight the thematic differences between networks.
+            For instance, CNN tends to emphasize global issues and scientific reporting,
+            while Fox News more often emphasizes political leadership and economic framing.
+        </p>
+
+        <a href="/" class="back">← Back to Classifier</a>
+    </div>
+</body>
+</html>
+
