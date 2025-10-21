@@ -7,14 +7,14 @@ It was developed as part of the ADS509 final project to demonstrate an end-to-en
 What It Does:
 
 Cleans and vectorizes text using TF-IDF.
-
 Trains a logistic regression classifier to distinguish between CNN and Fox News content.
-
 Provides a simple web interface for entering text and viewing predictions.
-
 Displays the model’s confidence score for each prediction.
-
 Designed to be lightweight and easy to run locally or deploy online.
+
+## Live Demo
+[View the App on Render](https://ads509-final-news-bias.onrender.com)
+
 
 Tech Stack:
 
@@ -49,33 +49,16 @@ ADS509Final/
 Model Performance:
 The model performs consistently across both classes, achieving roughly 75% accuracy.
 
-Running Locally
+How to Run this Locally: 
 
-Clone the repository:
-
-git clone https://github.com/<your-username>/ADS509Final.git
-cd ADS509Final
-
-
-Create and activate a virtual environment:
-
-python3 -m venv .venv
+# Clone repo and set up environment
+git clone https://github.com/Mammaritati15/ads509-final-news-bias.git
+cd ads509-final-news-bias
+python -m venv .venv
 source .venv/bin/activate
-
-
-Install dependencies:
-
 pip install -r requirements.txt
+python app/app.py
 
-
-Run the Flask app:
-
-cd app
-python app.py
-
-
-Open your browser and go to:
-http://127.0.0.1:5000
 
 Deployment Notes:
 
